@@ -1,6 +1,6 @@
 //its just for practice as today i hav lot of work to do so i think this should be a good way to practice.
 /*         *
-        *  *  *       big asss full pyramid
+        *  *  *       big asss half diamond
      *  *  *  *  *
   *  *  *  *  *  *  */
 #include<iostream>
@@ -40,7 +40,22 @@ int main()
                 cout <<" *"; 
                 l++; 
             } 
-         
+           
+            int g =1;
+            while(g<=n-i)
+            {
+                cout<<" ";
+                g++;
+            }
+
+             int h =1;
+            while(h<=i)
+            {
+                cout<<" *";
+                h++;
+            }
+
+
 
             cout<<endl;
             i++; 
@@ -48,5 +63,6 @@ int main()
         return 0;
         
     }
-    
+    //could not complete (cry emoji) 
     // took like 10 mins without one go // also first part was copied
+    //still gona upload for streaks
