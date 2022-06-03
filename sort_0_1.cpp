@@ -11,7 +11,8 @@ void swap(int arr[], int jrr[])
         temp = arr[n];
         arr[n] = arr[k];
         arr[k] = temp;
-        
+        // this function is easy to make but  i created it in form of array as in array call by reference but if it was just using 
+        // int data type then i should have used return variables (o~o)
     
     }
 
@@ -30,14 +31,14 @@ int main() {
         
         while(left<right)
         {
-            while(arr[left] == 0)
+            while(arr[left] == 0 && left<right)
             {
                 left++;
                 // this loop will continue till it finds that arr[left]!=0
                 //then this loop will exit
             }
             
-            while(arr[right] == 1)
+            while(arr[right] == 1 && left<right)
             {
                 right--;
                  // this loop will continue till it finds that arr[right]!=1
@@ -46,10 +47,13 @@ int main() {
             
             // if program has come to this line this means
             //that means arr[left]!=0 and arr[right]!=1 
-            
-            swap(arr[left],arr[right]);
-            left++;
-            right--;
+            if(left<right)
+            {
+                // left<right this condition was given because it seems that the pointer moves one step over and becomes left > right and this is why it sorts some elements but not all 
+                swap(arr[left],arr[right]);
+                left++;
+                right--;
+            }
         }
         
         for(int i = 0; i<n;i++)
@@ -57,5 +61,6 @@ int main() {
             cout<<arr[i]<<" ";
         }
         
-    return 0;
+//for code studio question sort 0_2
+  return 0;
 }
