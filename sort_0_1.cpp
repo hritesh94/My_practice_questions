@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-void swap(int arr[], int jrr[])
+void Swap(int arr[], int jrr[])
     {
         int temp;
         int n,k;
@@ -50,7 +50,7 @@ int main() {
             if(left<right)
             {
                 // left<right this condition was given because it seems that the pointer moves one step over and becomes left > right and this is why it sorts some elements but not all 
-                swap(arr[left],arr[right]);
+                Swap(arr[left],arr[right]);
                 left++;
                 right--;
             }
